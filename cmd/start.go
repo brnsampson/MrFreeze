@@ -99,6 +99,7 @@ func startRunCmd(cmd *cobra.Command, args []string) {
 	for {
 		err := f.TestTemp()
 		if err != nil {
+			f.Off() # better to leave power off than on
 			t := time.Now()
 			log.Printf("%v Encountered error: %v", t.Format(time.RFC822), err)
 			fmt.Printf("\n")
