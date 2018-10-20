@@ -68,7 +68,7 @@ func startRunCmd(cmd *cobra.Command, args []string) {
 	switchPin := bcm283x.GPIO25
 	ps := controller.PinShim{switchPin}
 
-	dev, err := onewire.NewDS18S20("28-00000854dafe")
+	dev, err := onewire.NewDS18S20("28-00000a29957e")
 	if err != nil {
 		log.Fatal(err)
 	} else {
